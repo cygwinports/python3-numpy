@@ -1,0 +1,15 @@
+category: Python
+requires: libgcc1 liblapack0 python3
+sdesc: "Py3K scientific computing module"
+ldesc: "The fundamental package needed for scientific computing with
+Python is called NumPy.  This package contains a powerful N-dimensional
+array object, sophisticated (broadcasting) functions, tools for
+integrating C/C++ and Fortran code, and useful linear algebra, Fourier
+transform, and random number capabilities.  It derives from the old
+Numeric code base and can be used as a replacement for Numeric.  It also
+adds the features introduced by numarray and can be used to replace
+numarray. Numeric users should find the transition very easy.  There is
+a module (import numpy.lib.convertcode --- see the convertall and
+fromfile functions in that module) that can make (most of) the necessary
+changes to your Python code that used Numeric to make it work with the
+new NumPy."
