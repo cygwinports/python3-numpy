@@ -1,0 +1,17 @@
+inherit python3-distutils
+
+CATEGORY="Python"
+SUMMARY="Py3K scientific computing module"
+DESCRIPTION="The fundamental package needed for scientific computing with
+Python is called NumPy.  This package contains a powerful N-dimensional
+array object, sophisticated (broadcasting) functions, tools for
+integrating C/C++ and Fortran code, and useful linear algebra, Fourier
+transform, and random number capabilities."
+HOMEPAGE="http://numeric.scipy.org/"
+SRC_URI="mirror://sourceforge/${ORIG_PN}/${ORIG_PN}-${PV}.tar.gz"
+PATCH_URI="1.0.4-fenv.patch
+           1.4.1-g77.patch
+"
+
+# interferes with get_flags_linker_so in numpy.distutils.fcompiler
+unset LDFLAGS
