@@ -15,6 +15,7 @@ SRC_URI="mirror://sourceforge/numpy/numpy-${VERSION}.tar.gz"
 SRC_DIR="numpy-${VERSION}"
 PATCH_URI="1.0.4-fenv.patch
            1.4.1-g77.patch
+           1.6.2-without-threads.patch
 "
 
 # interferes with get_flags_linker_so in numpy.distutils.fcompiler

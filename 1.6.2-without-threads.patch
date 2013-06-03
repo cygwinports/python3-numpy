@@ -1,0 +1,20 @@
+--- origsrc/numpy-1.6.2/numpy/core/src/multiarray/nditer.c.src	2012-05-19 08:51:54.000000000 -0500
++++ src/numpy-1.6.2/numpy/core/src/multiarray/nditer.c.src	2013-06-03 18:31:30.461234800 -0500
+@@ -6206,7 +6206,9 @@ NpyIter_DebugPrint(NpyIter *iter)
+     NpyIter_AxisData *axisdata;
+     npy_intp sizeof_axisdata;
+ 
++#ifdef WITH_THREAD
+     PyGILState_STATE gilstate = PyGILState_Ensure();
++#endif
+ 
+     printf("\n------ BEGIN ITERATOR DUMP ------\n");
+     printf("| Iterator Address: %p\n", (void *)iter);
+@@ -6418,5 +6420,7 @@ NpyIter_DebugPrint(NpyIter *iter)
+ 
+     printf("------- END ITERATOR DUMP -------\n");
+ 
++#ifdef WITH_THREAD
+     PyGILState_Release(gilstate);
++#endif
+ }
