@@ -2,7 +2,7 @@ inherit python3-distutils
 
 NAME="python3-numpy"
 VERSION=1.6.2
-RELEASE=2
+RELEASE=3
 CATEGORY="Python"
 SUMMARY="Py3K scientific computing module"
 DESCRIPTION="The fundamental package needed for scientific computing with
@@ -15,7 +15,6 @@ SRC_URI="mirror://sourceforge/numpy/numpy-${VERSION}.tar.gz"
 SRC_DIR="numpy-${VERSION}"
 PATCH_URI="1.0.4-fenv.patch
            1.4.1-g77.patch
-           1.6.2-without-threads.patch
 "
 
 # interferes with get_flags_linker_so in numpy.distutils.fcompiler
