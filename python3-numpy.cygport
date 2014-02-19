@@ -1,8 +1,8 @@
 inherit python3-distutils
 
 NAME="python3-numpy"
-VERSION=1.6.2
-RELEASE=3
+VERSION=1.7.2
+RELEASE=1
 CATEGORY="Python"
 SUMMARY="Py3K scientific computing module"
 DESCRIPTION="The fundamental package needed for scientific computing with
