@@ -1,0 +1,26 @@
+--- origsrc/numpy-1.9.2/numpy/distutils/fcompiler/gnu.py	2015-02-01 10:38:21.000000000 -0600
++++ src/numpy-1.9.2/numpy/distutils/fcompiler/gnu.py	2015-05-05 23:40:10.575533100 -0500
+@@ -69,7 +69,7 @@ class GnuFCompiler(FCompiler):
+     possible_executables = ['g77', 'f77']
+     executables = {
+         'version_cmd'  : [None, "--version"],
+-        'compiler_f77' : [None, "-g", "-Wall", "-fno-second-underscore"],
++        'compiler_f77' : [None, "-g", "-Wall"],
+         'compiler_f90' : None, # Use --fcompiler=gnu95 for f90 codes
+         'compiler_fix' : None,
+         'linker_so'    : [None, "-g", "-Wall"],
+@@ -256,11 +256,11 @@ class Gnu95FCompiler(GnuFCompiler):
+     executables = {
+         'version_cmd'  : ["<F90>", "--version"],
+         'compiler_f77' : [None, "-Wall", "-g", "-ffixed-form",
+-                          "-fno-second-underscore"] + _EXTRAFLAGS,
++                          ] + _EXTRAFLAGS,
+         'compiler_f90' : [None, "-Wall", "-g",
+-                          "-fno-second-underscore"] + _EXTRAFLAGS,
++                          ] + _EXTRAFLAGS,
+         'compiler_fix' : [None, "-Wall",  "-g","-ffixed-form",
+-                          "-fno-second-underscore"] + _EXTRAFLAGS,
++                          ] + _EXTRAFLAGS,
+         'linker_so'    : ["<F90>", "-Wall", "-g"],
+         'archiver'     : ["ar", "-cr"],
+         'ranlib'       : ["ranlib"],

@@ -1,7 +1,7 @@
 inherit python3-distutils
 
 NAME="python3-numpy"
-VERSION=1.7.2
+VERSION=1.9.2
 RELEASE=1
 CATEGORY="Python"
 SUMMARY="Py3K scientific computing module"
@@ -10,11 +10,11 @@ Python is called NumPy.  This package contains a powerful N-dimensional
 array object, sophisticated (broadcasting) functions, tools for
 integrating C/C++ and Fortran code, and useful linear algebra, Fourier
 transform, and random number capabilities."
-HOMEPAGE="http://numeric.scipy.org/"
+HOMEPAGE="http://www.numpy.org/"
 SRC_URI="mirror://sourceforge/numpy/numpy-${VERSION}.tar.gz"
 SRC_DIR="numpy-${VERSION}"
 PATCH_URI="1.0.4-fenv.patch
-           1.4.1-g77.patch
+           1.9.2-g77.patch
 "
 
 # interferes with get_flags_linker_so in numpy.distutils.fcompiler
